@@ -138,6 +138,15 @@ footer {
     header .web-name {
         font-size: 30px; /* Reduce font size on smaller tablets */
     }
+    .logo{
+        width:50px;
+        height:40px;
+    }
+    .logo img{
+        width:50px;
+        height:50px;
+
+    }
 
     #hero h1 {
         font-size: 2rem;
@@ -147,7 +156,7 @@ footer {
         color:black;
     }
 
-    .photo-grid {
+    .photo-grid2 {
         justify-content: center; /* Ensure images are centered */
     }
 
@@ -158,15 +167,44 @@ footer {
 
 @media screen and (max-width: 480px) {
     header .web-name {
-        font-size: 24px; /* Further reduce font size on small screens */
+        font-size: 20px; /* Further reduce font size on small screens */
     }
 
+    .logo{
+        width:60px;
+        height:60px;
+        border-radius: 50%;
+    }
+    .logo img{
+        width:60px;
+        height:60px;
+        border-radius: 50%;
+        object-fit: fill;
+
+    }
+    header .logo img {
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    header nav{
+        /* display: flex;
+        justify-content: center; */
+        margin-left: 150px;
+    }
+
+    #hero{
+        background-color: aliceblue;
+        border-radius: 10px;
+    }
     #hero h1 {
-        font-size: 1.8rem;
+        font-size: 30px;
         color:black;
     }
     #hero p{
         color:black;
+        font-size: 13px;
+        font-weight: normal;
     }
 
     #hero button {
@@ -174,10 +212,20 @@ footer {
         padding: 0.4rem 0.8rem;
     }
 
+    #gallery{
+        padding:0;
+        border-radius: 10px;
+    }
     #gallery h2 {
         font-size: 1.4rem;
     }
 
+    .photo-grid2 img {
+        justify-content: center; /* Ensure images are centered */
+        margin-bottom:10px;
+        height:350px;
+        border-radius:10px;
+    }
     footer {
         font-size: 0.9rem;
     }
