@@ -44,6 +44,7 @@ header nav ul li a {
     padding: 3rem 1.7rem;
     background: url('hero.jpg') no-repeat center center/cover;
     color: #fff;
+    background-color: aliceblue;
 }
 
 #hero h1 {
@@ -95,6 +96,7 @@ header nav ul li a {
     height: auto;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to images */
+    margin-bottom:10px;
 }
 
 #about, #contact {
@@ -131,39 +133,77 @@ footer {
     color: #fff;
 }
 
+
+
 /* Responsive Styles - Maintains the design as it is on web version */
 
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
     header .web-name {
-        font-size: 30px; /* Reduce font size on smaller tablets */
+        font-size: 20px; /* Further reduce font size on small screens */
     }
+
     .logo{
-        width:50px;
-        height:40px;
+        width:60px;
+        height:60px;
+        border-radius: 50%;
     }
     .logo img{
-        width:50px;
-        height:50px;
+        width:60px;
+        height:60px;
+        border-radius: 50%;
+        object-fit: fill;
 
     }
+    header .logo img {
+        height: 60px;
+        border-radius: 50%;
+    }
 
+    header nav{
+        /* display: flex;
+        justify-content: center; */
+        margin-left: 150px;
+    }
+
+    #hero{
+        background-color: aliceblue;
+        border-radius: 10px;
+    }
     #hero h1 {
-        font-size: 2rem;
+        font-size: 30px;
         color:black;
     }
     #hero p{
         color:black;
+        font-size: 13px;
+        font-weight: normal;
     }
 
-    .photo-grid2 {
+    #hero button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    #gallery{
+        padding:0;
+        border-radius: 10px;
+    }
+    #gallery h2 {
+        font-size: 1.4rem;
+    }
+
+    .photo-grid2 img {
         justify-content: center; /* Ensure images are centered */
+        margin-bottom:10px;
+        width:200px;
+        height:300px;
+        border-radius:10px;
     }
-
-    form input, form textarea, form button {
-        max-width: 100%; /* Ensure full-width form elements */
+    footer {
+        font-size: 0.9rem;
     }
 }
+
 
 @media screen and (max-width: 480px) {
     header .web-name {
@@ -223,7 +263,87 @@ footer {
     .photo-grid2 img {
         justify-content: center; /* Ensure images are centered */
         margin-bottom:10px;
-        height:350px;
+        width:150px;
+        height:200px;
+        border-radius:10px;
+    }
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+@media screen and (max-width: 360px){
+    header .web-name {
+        font-size: 17px; /* Further reduce font size on small screens */
+        /* margin:0; */
+    }
+    header{
+        padding: 10px 20px;
+        /* padding-left:20px; */
+    }
+
+
+    .logo{
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+    }
+    .logo img{
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+        object-fit: fill;
+
+    }
+    header .logo img {
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    header nav{
+        /* display: flex;
+        justify-content: center; */
+        margin-left: 80px;
+    }
+
+    #hero{
+        background-color: aliceblue;
+        border-radius: 10px;
+    }
+    #hero h1 {
+        font-size: 30px;
+        color:black;
+    }
+    #hero p{
+        color:black;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    #hero button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    #gallery{
+        padding:0;
+        /* border-top-right-radius: 10px; */
+        width:100%;
+    }
+    #gallery h2 {
+        font-size: 1.4rem;
+    }
+
+    .photo-grid2{
+        width: 100%;
+    }
+    .photo-grid2 img {
+        justify-content: center; /* Ensure images are centered */
+        margin-bottom:10px;
+        width:100px;
+        height:150px;
         border-radius:10px;
     }
     footer {
