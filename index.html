@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="photos/wpp logo2.webp" type="image/webp">
     <title>World Pride Photography</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="slider.css"> -->
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -22,23 +25,62 @@
         </nav>
     </header>
 
-    <section id="hero">
-        <h1>Welcome to World Pride Photography</h1>
-        <p>Where every moment is captured with passion and pride.</p>
-        <button id="bookButton">Book a Session</button>
-    </section>
+
+
+    <div class="slider">
+        <section id="hero">
+            <h1>Welcome to World Pride Photography</h1>
+            <p>Where every moment is captured with passion and pride.</p>
+            <button id="bookButton">Book a Session</button>
+        </section>
+
+        <div class="slide active">
+            <img src="photos/photo25.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="photos/photo23.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="photos/photo28.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="photos/photo26.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="photos/photo24.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="photos/photo27.jpg" alt="">
+        </div>
+
+
+        <div class="navigation">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+        </div>
+    </div>
+
 
     <section id="gallery">
         <h2>Gallery</h2>
-        
+
         <div class="photo-grid2">
             <img src="photos/photo17.png" alt="Photo 1">
-            
+
             <img src="photos/photo2.png" alt="Photo 2">
             <img src="photos/photo3.png" alt="Photo 3">
             <img src="photos/photo4.png" alt="Photo 4">
             <img src="photos/photo5.png" alt="Photo 5">
-            
+
             <img src="photos/photo6.png" alt="Photo 6">
             <img src="photos/photo7.png" alt="Photo 7">
             <img src="photos/photo8.png" alt="Photo 8">
@@ -56,12 +98,13 @@
             <img src="photos/photo18.png" alt="Photo 18">
 
         </div>
-        
+
     </section>
 
     <section id="about">
         <h2>About Us</h2>
-        <p>At World Pride Photography, we celebrate diversity and beauty through the lens. Our mission is to capture your moments in ways that reflect the unique essence of every individual and every story.</p>
+        <p>At World Pride Photography, we celebrate diversity and beauty through the lens. Our mission is to capture
+            your moments in ways that reflect the unique essence of every individual and every story.</p>
     </section>
 
     <section id="contact">
@@ -84,6 +127,8 @@
         </div>
         <a href="https://github.com/Sahil-3000">Other works of Sahil</a>
     </footer>
+    <script src="slider.js"></script>
     <script src="main.js" type="module"></script>
 </body>
+
 </html>

@@ -23,3 +23,8 @@ if (contactForm) {
         }
     });
 }
+
+const showSlider = document.querySelector(".logo");
+showSlider.addEventListener("click",()=> {
+    window.location.href = "slider.html";
+})

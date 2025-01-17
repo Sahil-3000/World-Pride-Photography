@@ -40,21 +40,30 @@ header nav ul li a {
 }
 
 #hero {
+    position:fixed;
+    top:20%;
+    left:30%;
+    right:30%;
+    z-index:1000;
+
+    width:auto;
+    overflow-y:hidden;
     text-align: center;
-    padding: 3rem 1.7rem;
+    /* padding: 3rem 1.7rem; */
     background: url('hero.jpg') no-repeat center center/cover;
-    color: #fff;
-    background-color: aliceblue;
+    color: #ffffff;
+    background-color: transparent;
+    display:inline-table;
 }
 
 #hero h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
-    color:black;
+    color:rgb(245, 242, 242);
 }
 
 #hero p{
-    color:black;
+    color:rgb(247, 246, 246);
     font-family: cursive;
     font-size: 25px;
     margin-top:1rem;
@@ -69,11 +78,152 @@ header nav ul li a {
     color: #fff;
 }
 
+.slider {
+    display:flex;
+    height:1000px;
+    margin-bottom:30px;
+    margin-top:0;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+.slide{
+    opacity: 0; /* Show the active slide */
+    z-index: 1; /* Ensure it's on top */
+
+}
+
+.slide.active {
+    opacity: 1; /* Show the active slide */
+    z-index: 1; /* Ensure it's on top */
+  }
+
+.slide img{
+    width:100vw;
+    height:1000px;
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .navigation .prev,
+  .navigation .next {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .dot {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  
+  .dot.active {
+    opacity: 1;
+  }
+
+
+
+
+  .slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0; /* Hide all slides */
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0; /* Default stacking order */
+  }
+  
+  .slide.active {
+    opacity: 1; /* Show the active slide */
+    z-index: 1; /* Ensure it's on top */
+  }
+  
+  .navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index:1;
+  }
+  
+  .navigation button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    z-index:1;
+  }
+  
+  .dot {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .dot.active {
+    opacity: 1;
+  }
+  
+
+
+
+
+
+
+
 #gallery {
     padding: 15px 10px;
     background-color: rgb(72, 103, 106);
     text-align: center;
     display:grid;
+    position:relative;
+    z-index:3000;
 }
 
 #gallery h2 {
@@ -101,12 +251,16 @@ header nav ul li a {
 #about, #contact {
     padding: 2rem;
     text-align: center;
+    position:relative;
+    z-index:3000;
 }
 
 #about{
     margin-top:15px;
     background-color: black;
     color: white;
+    position:relative;
+    z-index:3000;
 }
 
 form input, form textarea, form button {
@@ -130,6 +284,8 @@ footer {
     padding: 1rem;
     background-color: #333;
     color: #fff;
+    position:relative;
+    z-index:3000;
 }
 
 footer a{
@@ -182,28 +338,108 @@ footer .dev img{
         margin-left: 150px;
     }
 
-    #hero{
-        background-color: aliceblue;
-        border-radius: 10px;
+
+    #hero {
+        position:fixed;
+        align-items: center;
+    
+        width:50%;
+        text-align: center;
+        /* padding: 3rem 1.7rem; */
+        background: url('hero.jpg') no-repeat center center/cover;
+        color: #ffffff;
+        background-color: transparent;
+        display:inline-table;
     }
+    
     #hero h1 {
-        font-size: 30px;
-        color:black;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color:rgb(245, 242, 242);
     }
+    
     #hero p{
-        color:black;
-        font-size: 13px;
-        font-weight: normal;
+        color:rgb(247, 246, 246);
+        font-family: cursive;
+        font-size: 15px;
+        margin-top:1rem;
+    }
+    
+    #hero button {
+        padding: 0.5rem 1rem;
+        font-size: 0.6rem;
+        background-color: #ff9900;
+        border: none;
+        cursor: pointer;
+        color: #fff;
     }
 
-    #hero button {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
+    .slider{
+        height:500px;
     }
+    .slider img{
+        height:500px;
+    }
+
+
+    .navigation {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        z-index:1;
+      }
+      
+      .navigation button {
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        font-size: 15px;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      
+      .dots {
+        position: absolute;
+        bottom: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        z-index:1;
+      }
+      
+      .dot {
+        width: 10px;
+        height: 10px;
+        background: white;
+        border-radius: 50%;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: opacity 0.3s;
+      }
+      
+      .dot.active {
+        opacity: 1;
+      }
+
+
+
+
+
+
+
+
+
 
     #gallery{
         padding:0;
         border-radius: 10px;
+        position:relative;
+        z-index:3000;
     }
     #gallery h2 {
         font-size: 1.4rem;
@@ -216,8 +452,20 @@ footer .dev img{
         height:300px;
         border-radius:10px;
     }
+    #about{
+        position:relative;
+        z-index:3000;
+    }
+
+    #contact{
+        position:relative;
+        z-index:3000;
+    }
+
     footer {
         font-size: 0.9rem;
+        position:relative;
+        z-index:3000;
     }
 }
 
@@ -253,28 +501,58 @@ footer .dev img{
         margin-left: 150px;
     }
 
-    #hero{
-        background-color: aliceblue;
-        border-radius: 10px;
+    
+    #hero {
+        position:fixed;
+        /* left:auto;
+        right:auto; */
+        align-items: center;
+    
+        width:50%;
+        text-align:center;
+        /* padding: 3rem 1.7rem; */
+        background: url('hero.jpg') no-repeat center center/cover;
+        color: #ffffff;
+        background-color: transparent;
+        display:inline-table;
     }
+    
     #hero h1 {
-        font-size: 30px;
-        color:black;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color:rgb(245, 242, 242);
+        width:auto;
     }
+    
     #hero p{
-        color:black;
+        color:rgb(247, 246, 246);
+        font-family: cursive;
         font-size: 13px;
-        font-weight: normal;
+        margin-top:1rem;
+    }
+    
+    #hero button {
+        padding: 0.5rem 1rem;
+        font-size: 0.6rem;
+        background-color: #ff9900;
+        border: none;
+        cursor: pointer;
+        color: #fff;
     }
 
-    #hero button {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
+    .slider{
+        height:500px;
     }
+    .slider img{
+        height:500px;
+    }
+
 
     #gallery{
         padding:0;
         border-radius: 10px;
+        position:relative;
+        z-index:3000;
     }
     #gallery h2 {
         font-size: 1.4rem;
@@ -287,14 +565,27 @@ footer .dev img{
         height:200px;
         border-radius:10px;
     }
+
+    #about{
+        position:relative;
+        z-index:3000;
+    }
+
+    #contact{
+        position:relative;
+        z-index:3000;
+    }
+
     footer {
         font-size: 0.9rem;
+        position:relative;
+        z-index:3000;
     }
 }
 
 
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 390px){
     *{
         cursor:none;
     }
@@ -331,29 +622,59 @@ footer .dev img{
         margin-left: 80px;
     }
 
-    #hero{
-        background-color: aliceblue;
-        border-radius: 10px;
+    
+    
+    #hero {
+        position:fixed;
+        left:25%;
+        right:auto;
+        align-items: start;
+    
+        width:50%;
+        text-align: center;
+        /* padding: 3rem 1.7rem; */
+        background: url('hero.jpg') no-repeat center center/cover;
+        color: #ffffff;
+        background-color: transparent;
+        display:inline-table;
     }
+    
     #hero h1 {
-        font-size: 30px;
-        color:black;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        color:rgb(245, 242, 242);
     }
+    
     #hero p{
-        color:black;
+        color:rgb(247, 246, 246);
+        font-family: cursive;
         font-size: 13px;
-        font-weight: normal;
+        margin-top:1rem;
+    }
+    
+    #hero button {
+        padding: 0.5rem 1rem;
+        font-size: 0.6rem;
+        background-color: #ff9900;
+        border: none;
+        cursor: pointer;
+        color: #fff;
     }
 
-    #hero button {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
+    .slider{
+        height:500px;
     }
+    .slider img{
+        height:500px;
+    }
+
 
     #gallery{
         padding:0;
         /* border-top-right-radius: 10px; */
         width:100%;
+        position:relative;
+        z-index:3000;
     }
     #gallery h2 {
         font-size: 1.4rem;
@@ -369,7 +690,20 @@ footer .dev img{
         height:150px;
         border-radius:10px;
     }
+
+    #about{
+        position:relative;
+        z-index:3000;
+    }
+
+    #contact{
+        position:relative;
+        z-index:3000;
+    }
+
     footer {
         font-size: 0.9rem;
+        position:relative;
+        z-index:3000;
     }
 }
