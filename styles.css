@@ -81,7 +81,7 @@ header nav ul li a {
 .slider {
     display:flex;
     height:1000px;
-    margin-bottom:30px;
+    margin-bottom:20px;
     margin-top:0;
     overflow-x:hidden;
     overflow-y:hidden;
@@ -255,8 +255,15 @@ header nav ul li a {
     z-index:3000;
 }
 
+#contact{
+    margin-top:5px;
+    position:relative;
+    background-color: white;
+    z-index:3000
+}
+
 #about{
-    margin-top:15px;
+    margin-top:10px;
     background-color: black;
     color: white;
     position:relative;
